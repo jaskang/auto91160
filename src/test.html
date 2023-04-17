@@ -1,0 +1,48 @@
+.schedul-box .ss-btn .btn-con
+
+<div
+  data-v-d563b036=""
+  class="ss-btn flex align_center justify_center"
+  style="background: rgb(90, 207, 131); color: rgb(255, 255, 255)"
+>
+  <div data-v-d563b036="" class="btn-con fs13">
+    <p data-v-d563b036="">挂号</p>
+    <!---->
+  </div>
+</div>
+<script>
+  let hasBtn = false
+
+  setInterval(() => {
+    if (hasBtn == false) {
+      // 挂号日期
+      Array.from(document.querySelectorAll('#soruce-info-box .refesh-btn')).forEach(btn => {
+        btn.click()
+      })
+    }
+  }, 5000)
+
+  setInterval(() => {
+    // 挂号日期
+    Array.from(document.querySelectorAll('.schedul-box .ss-btn')).forEach(btn => {
+      // click btn Element
+      if (btn.style.background === 'rgb(90, 207, 131)') {
+        console.log(btn)
+        hasBtn = true
+        btn.click()
+      }
+    })
+  }, 50)
+  setInterval(() => {
+    // 挂号时间段
+    Array.from(
+      document.querySelectorAll('.source-time-box .times-box > div:not(.item-full)')
+    ).forEach(btn => {
+      btn.click()
+      document.querySelector('.submit-btn').click()
+    })
+  }, 50)
+</script>
+//
+https://weixin.91160.com/h5/register/doctor/detail.html?unit_id=21&dep_id=4385&doc_id=9153&from_function_id=UNIT_GH_DEP_DOC&from_function_name=%E5%8C%BB%E9%99%A2-%E6%8C%82%E5%8F%B7-%E7%A7%91%E5%AE%A4%E5%8C%BB%E7%94%9F%E5%88%97%E8%A1%A8&type=guahao&set_unit=1
+https://weixin.91160.com/h5/register/confirmOrder/index.html?unit_id=21&dep_id=4385&doctor_id=9153&sch_id=24a6876d75ae643a34a373c9a76876bcab5aea022eaaa5acaf&detl_id=24a228643b57098c79b96884b1d2a7f242abb5bd&isVideo=2&srcext_amt=25.0&from_function_id=DOC_GH_YUYUE1&from_function_name=%E5%8C%BB%E7%94%9F%E4%B8%BB%E9%A1%B5_%E6%8C%82%E5%8F%B7_%E9%A2%84%E7%BA%A6
